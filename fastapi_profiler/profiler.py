@@ -120,7 +120,7 @@ class PyInstrumentProfilerMiddleware:
                 html_file_name,
             )
 
-            renderer = HTMLRenderer()
+            renderer = HTMLRenderer(show_all = True, timeline = True)
             if self._open_in_browser:
                 renderer.open_in_browser(
                     session=self._profiler.last_session,
